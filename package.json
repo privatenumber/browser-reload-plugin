@@ -1,0 +1,50 @@
+{
+	"name": "browser-reload-plugin",
+	"version": "0.0.0-semantic-release",
+	"description": "Automatically reload the browser on every Webpack watch completion",
+	"keywords": [
+		"webpack",
+		"plugin",
+		"reload",
+		"refresh",
+		"browser",
+		"live",
+		"watch"
+	],
+	"license": "MIT",
+	"repository": "privatenumber/browser-reload-plugin",
+	"funding": "https://github.com/privatenumber/browser-reload-plugin?sponsor=1",
+	"author": {
+		"name": "Hiroki Osame",
+		"email": "hiroki.osame@gmail.com"
+	},
+	"files": [
+		"lib"
+	],
+	"main": "lib/browser-reload-plugin.js",
+	"scripts": {
+		"lint": "xo"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": "xo"
+	},
+	"devDependencies": {
+		"husky": "^4.3.0",
+		"lint-staged": "^10.4.2",
+		"xo": "^0.34.0",
+		"webpack": "^4.36.0"
+	},
+	"dependencies": {
+		"get-port": "^5.1.1",
+		"webpack-sources": "^2.0.1",
+		"ws": "^7.3.1"
+	},
+	"peerDependencies": {
+		"webpack": "^4.36.0"
+	}
+}
