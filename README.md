@@ -31,6 +31,8 @@ In your development Webpack config:
 
 - `port` (`8080`) - Port to bind the servert to. If unavailable, it falls back to a random available port.
 - `retryWait` (`5000`) - How long to wait before trying a failed connection on the client-side.
+- `include` (`\.js$`) - A pattern (`string | RegExp | [string, RegExp]`) to match entry-files. This is useful if your app has multiple entry-points but you only want the reload client to be added to specific ones.
+- `exclude` - A pattern (`string | RegExp | [string, RegExp]`) to exclude certain entry-points.
 
 ## 💁‍♀️ FAQ
 
