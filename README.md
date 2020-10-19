@@ -29,7 +29,7 @@ In your development Webpack config:
 
 ## ⚙️ Options
 
-- `port` (`8080`) - Port to bind the servert to. Falls back to a random available port.
+- `port` (`8080`) - Port to bind the servert to. If unavailable, it falls back to a random available port.
 - `retryWait` (`5000`) - How long to wait before trying a failed connection on the client-side.
 
 ## 💁‍♀️ FAQ
@@ -46,4 +46,4 @@ No, HMR is far superior to this approach. Only use this plugin when you have a s
 
 ### How is this different from [webpack-livereload-plugin](https://www.npmjs.com/package/webpack-livereload-plugin)?
 
-`webpack-livereload-plugin` requires adding a `<script>` tag your HTML document in order to make the live-reload work. This plugin automatically injects itself to the entry-points of your app, and doesn't require any additional setup apart from adding the plugin to the Webpack configuration. It's also much lighter & faster.
+`webpack-livereload-plugin` requires adding a `<script>` tag to your HTML document in order to make live-reload work. This plugin automatically injects itself to the entry-points of your app, and doesn't require any additional setup apart from adding the plugin to the Webpack configuration. It's also much lighter & faster.
