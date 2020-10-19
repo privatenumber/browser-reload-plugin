@@ -27,11 +27,28 @@ In your development Webpack config:
   }
 ```
 
+That's it! 🎉 Just run your `watch` command to see it in action.
+
+
+## 🎛 Browser API
+The plugin globally exposes a `__browserReloadPlugin` object that lets you configure the plugin at run-time.
+
+- `enabled` (`true`) - Whether to reload the browser on changes.
+- `retryWait` (`retryWait` from plugin options) - How long to wait before re-trying a failed connection on the client-side.
+- `wsServer` (`ws://localhost:PORT`) - The WebSocket server address.
+
+To recongiure at run-time, simply rewrite the object properties:
+
+```js
+__browserReloadPlugin.enabled = false;
+```
+
+
 ## ⚙️ Options
 
 - `port` (`8080`) - Port to bind the servert to. If unavailable, it falls back to a random available port.
-- `retryWait` (`5000`) - How long to wait before trying a failed connection on the client-side.
-- `include` (`/\.js$/`) - A pattern (`string | RegExp | [string, RegExp]`) to match entry-files. This is useful if your app has multiple entry-points but you only want the reload client to be added to specific ones.
+- `retryWait` (`5000`) - How long to wait before re-trying a failed connection on the client-side.
+- `include` (`/\.js$/`) - A pattern (`string | RegExp | [string, RegExp]`) to match entry-files to add the client-code to. This is useful if your app has multiple entry-points but you only want the reload client to be added to specific ones.
 - `exclude` - A pattern (`string | RegExp | [string, RegExp]`) to exclude certain entry-points.
 
 ## 💁‍♀️ FAQ
