@@ -1,7 +1,7 @@
 {
 	"name": "browser-reload-plugin",
 	"version": "0.0.0-semantic-release",
-	"description": "Automatically reload the browser on every Webpack watch completion",
+	"description": "Automatically reload the browser page on every Webpack watch build",
 	"keywords": [
 		"webpack",
 		"plugin",
@@ -33,18 +33,18 @@
 	"lint-staged": {
 		"*.js": "xo"
 	},
-	"devDependencies": {
-		"husky": "^4.3.0",
-		"lint-staged": "^10.4.2",
-		"xo": "^0.34.0",
-		"webpack": "^4.36.0"
+	"peerDependencies": {
+		"webpack": "^4.30.0"
 	},
 	"dependencies": {
 		"get-port": "^5.1.1",
 		"webpack-sources": "^2.0.1",
 		"ws": "^7.3.1"
 	},
-	"peerDependencies": {
+	"devDependencies": {
+		"husky": "^4.3.0",
+		"lint-staged": "^10.4.2",
+		"xo": "^0.34.0",
 		"webpack": "^4.36.0"
 	}
 }
