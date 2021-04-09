@@ -3,9 +3,10 @@
 Automatically reload the browser page on every Webpack watch build
 
 ## 🙋‍♂️ Why?
-- **🔥 Automatic browser reloads** Speed up development by auto-reloading as soon as your build completes!
-- **⚡️ Quick setup** All you need is two lines of code to add the plugin!
-- **🔌 Auto Reconnects** Automatically reconnects when restarting the watch!
+Manually reloading the browser page after your Webpack watch-build finishes is tedious and can really add up.
+
+Speed up development iterations in environments that don't support [Hot Module Replacement (HMR)](https://webpack.js.org/concepts/hot-module-replacement/) with _browser-reload-plugin_.
+
 
 ## 🚀 Install
 ```sh
@@ -13,6 +14,8 @@ npm i -D browser-reload-plugin
 ```
 
 ## 🚦 Quick Setup
+All you need is two lines of code to get started with the plugin!
+
 In your development Webpack config:
 
 ```diff
@@ -53,14 +56,14 @@ __browserReloadPlugin.enabled = false;
 
 ## 💁‍♀️ FAQ
 
-### Does this work on regular builds?
+### Does this work on regular non-watch builds?
 
 No, it's designed specifically for Webpack watch mode.
 
 
 ### Should I use this over [Hot Module Replacement (HMR)](https://webpack.js.org/concepts/hot-module-replacement/)?
 
-No, HMR is far superior to this approach. Only use this plugin when you have a sophisticated application that doesn't work well with HMR but you'd still like to automate browser page reloads on build.
+HMR is far superior to this approach. Only use this plugin when you have a sophisticated application that doesn't work well with HMR but you'd still like to automate browser page reloads on build.
 
 
 ### How is this different from [webpack-livereload-plugin](https://www.npmjs.com/package/webpack-livereload-plugin)?
