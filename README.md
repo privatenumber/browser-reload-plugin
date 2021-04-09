@@ -37,7 +37,7 @@ The plugin globally exposes a `__browserReloadPlugin` object that lets you confi
 - `retryWait` (`retryWait` from plugin options) - How long to wait before re-trying a failed connection on the client-side.
 - `wsServer` (`ws://localhost:PORT`) - The WebSocket server address.
 
-To recongiure at run-time, simply rewrite the object properties:
+You can also reconfigure at run-time by rewriting the object properties. For example:
 
 ```js
 __browserReloadPlugin.enabled = false;
